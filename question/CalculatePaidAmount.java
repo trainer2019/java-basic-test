@@ -9,8 +9,8 @@ public class CalculatePaidAmount {
 		final BigDecimal taxRate = new BigDecimal("1.08");
 
 		BigDecimal price = new BigDecimal(250);
-		BigDecimal purchase = new BigDecimal(5);
-		BigDecimal discount = new BigDecimal(300);
+		BigDecimal purchase = new BigDecimal(args[0]);
+		BigDecimal discount = new BigDecimal(args[1]);
 
 		BigDecimal saleAmount = price.multiply(purchase);
 

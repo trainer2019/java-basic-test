@@ -8,12 +8,12 @@ public class SimpleDivision {
 		int val02 = Integer.parseInt(args[1]);
 
 		try {
-			System.out.println(val01 / val02);
-			System.out.println("function finished.");
+			System.out.print(val01 / val02);
+			System.out.println(" -> function finished.");
 		} catch (ArithmeticException e) {
-			System.out.println("[ERROR] ArithmeticException");
+			System.out.print("[ERROR] ArithmeticException");
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("[ERROR] ArrayIndexOutOfBoundsException");
+			System.out.print("[ERROR] ArrayIndexOutOfBoundsException");
 		}
 	}
 

@@ -4,14 +4,13 @@ public class AddingSeriesNumber {
 
 	public static void main(String[] args) {
 
-		int targetNumber = 3;
-		int addingCount = 12;
+		int addingCount = Integer.parseInt(args[0]);
 
 		int sum = 0;
 		for (int i = 0; i < addingCount; i++) {
-			sum = sum + targetNumber;
+			int seriesNumber = i + 1;
+			sum = sum + seriesNumber;
 		}
-
 		System.out.println(sum);
 	}
 
