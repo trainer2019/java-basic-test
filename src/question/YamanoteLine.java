@@ -12,23 +12,27 @@ public class YamanoteLine {
                 "駒込", "巣鴨", "大塚", "池袋", "目白", "高田馬場", "新大久保"};
         final int stationCount = stations.length;
 
+        String currentStation = stations[0];
+        System.out.println("◇ " + currentStation + "駅を出発します。");
+
         int i = 0;
         while (i < ahead) {
-            String station = stations[(i + 1) % stationCount];
+            i++;
+            currentStation = stations[(i) % stationCount];
 
-            if (i == (ahead - 1)) {
-                System.out.println("◆ " + station + "駅に到着しました。");
+            // 0.5秒待つ処理
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            if (i == ahead) {
+                System.out.println("◆ " + currentStation + "駅に到着しました。");
 
             } else {
-                // 0.5秒待つ処理
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("ただいま" + station + "駅です。");
+                System.out.println("ただいま" + currentStation + "駅です。");
             }
-            i++;
         }
     }
 }
